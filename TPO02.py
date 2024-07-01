@@ -45,29 +45,26 @@ def listar_materias(materias):
             print("-" * 68)
     else:
         print("No hay materias cargadas.")
-        
-        
-# Funcion para buscar materias
+
+# Función para buscar materias
 def buscar_materias(materias):
     criterio = input("Buscar por (ID/Nombre): ").strip().lower()
     if criterio == "id":
         id_buscar = int(input("Ingrese el ID de la materia: "))
         for materia in materias:
-            if materia ["ID"] == id_buscar:
+            if materia["ID"] == id_buscar:
                 print(f"Materia encontrada: {materia}")
                 return materia
-        print(f"La materia no fue encontrada.")
-    elif criterio == "materia":
+        print("La materia no fue encontrada.")
+    elif criterio == "nombre":
         nombre_buscar = input("Ingrese la materia a buscar: ").strip().lower()
         for materia in materias:
-            if materia["materia"].strip().lower() == nombre_buscar:
+            if materia["Materia"].strip().lower() == nombre_buscar:
                 print(f"Materia encontrada: {materia}")
                 return materia
         print("La materia no fue encontrada.")
     else:
         print("El criterio de busqueda no es valido.")
-        
-        
 
 def main():
     while True:
